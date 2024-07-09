@@ -3,14 +3,14 @@
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <PackageId>librealsense.x64</PackageId>
+    <PackageId>librealsense.framos.x64</PackageId>
     <Authors>Intel®</Authors>
-    <Product>Intel® RealSense™ SDK</Product>
-    <AssemblyVersion>2.45.1.0</AssemblyVersion>
-    <FileVersion>2.45.1.0</FileVersion>
-    <Version>2.45.1</Version>
+    <Product>Intel® RealSense™ SDK for FRAMOS D400e</Product>
+    <AssemblyVersion>2.50.12.0</AssemblyVersion>
+    <FileVersion>2.50.12.0</FileVersion>
+    <Version>2.50.12</Version>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
-    <Description>Intel® RealSense™ cross-platform C# wrapper.</Description>
+    <Description>Intel® RealSense™ cross-platform C# wrapper for FRAMOS D400e.</Description>
     <PackageLicenseFile>LICENSE</PackageLicenseFile>
     <Platforms>AnyCPU</Platforms>
     <AssemblyName>Intel.RealSense</AssemblyName>
@@ -20,14 +20,19 @@
     <PackageIconUrl />
     <PackageProjectUrl>https://github.com/IntelRealSense/librealsense</PackageProjectUrl>
     <PackageTags>intel realsense depth-camera computer-vision</PackageTags>
-    <RepositoryUrl>https://github.com/asiryan/Intel.RealSense</RepositoryUrl>
+    <RepositoryUrl>https://github.com/SavonAutomaatio/Intel.RealSense.FRAMOS</RepositoryUrl>
     <RepositoryType>open-source</RepositoryType>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
-    <Optimize>true</Optimize>
-    <PlatformTarget>AnyCPU</PlatformTarget>
-    <DocumentationFile>C:\Users\Valery\Documents\GitHub\Intel.RealSense\Intel.RealSense\Intel.RealSense.xml</DocumentationFile>
+	  <Optimize>true</Optimize>
+	  <PlatformTarget>AnyCPU</PlatformTarget>
+	  <DocumentationFile>Intel.RealSense.xml</DocumentationFile>
+	  <DefineConstants>$(DefineConstants);FRAMOS</DefineConstants>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <DefineConstants>$(DefineConstants);FRAMOS</DefineConstants>
   </PropertyGroup>
 
   <ItemGroup>

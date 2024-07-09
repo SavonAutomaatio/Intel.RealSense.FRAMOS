@@ -60,6 +60,14 @@ namespace Intel.RealSense
             NativeMethods.rs2_config_enable_all_stream(Handle, out error);
         }
 
+#if FRAMOS
+        public void SetSyncerMode(SyncerModes syncerMode)
+        {
+            object error;
+            NativeMethods.rs2_config_set_syncer_mode(Handle, syncerMode, out error);
+        }
+#endif
+
         public void EnableDevice(string serial)
         {
             object error;

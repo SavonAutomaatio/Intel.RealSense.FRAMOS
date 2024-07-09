@@ -20,6 +20,37 @@ namespace Intel.RealSense
 
         /// <summary> Primary firmware version</summary>
         FirmwareVersion = 2,
+#if FRAMOS
+        /// <summary> Secondary firmware version, added for ethernet devices</summary>
+        DeviceVersion = 3,
+
+        /// <summary> Recommended firmware version</summary>
+        RecommendedFirmwareVersion = 4,
+
+        /// <summary> Unique identifier of the port the device is connected to (platform specific)</summary>
+        PhysicalPort = 5,
+
+        /// <summary> If device supports firmware logging, this is the command to send to get logs from firmware</summary>
+        DebugOpCode = 6,
+
+        /// <summary> True iff the device is in advanced mode</summary>
+        AdvancedMode = 7,
+
+        /// <summary> Product ID as reported in the USB descriptor</summary>
+        ProductId = 8,
+
+        /// <summary> True iff EEPROM is locked</summary>
+        CameraLocked = 9,
+
+        /// <summary> Designated USB specification: USB2/USB3</summary>
+        UsbTypeDescriptor = 10,
+
+        /// <summary> Ip address, added for ethernet devices</summary>
+        IpAddress = 14,
+
+        /// <summary> Ip address, added for ethernet devices</summary>
+        SubnetMask = 15,
+#else
 
         /// <summary> Recommended firmware version</summary>
         RecommendedFirmwareVersion = 3,
@@ -41,5 +72,6 @@ namespace Intel.RealSense
 
         /// <summary> Designated USB specification: USB2/USB3</summary>
         UsbTypeDescriptor = 9,
+#endif
     }
 }

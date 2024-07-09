@@ -10,7 +10,6 @@ namespace Intel.RealSense.Base
     /// </summary>
     public abstract class PooledObject : Object
     {
-        ///
         protected PooledObject(IntPtr ptr, Deleter deleter)
             : base(ptr, deleter)
         {

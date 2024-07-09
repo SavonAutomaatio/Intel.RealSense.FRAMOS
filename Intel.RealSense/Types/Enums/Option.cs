@@ -273,6 +273,51 @@ namespace Intel.RealSense
         auto_exposure_limit = 85,
 
         /// <summary>auto gain limit - for D400 SKUs</summary>
-        auto_gain_limit = 86
+        auto_gain_limit = 86,
+
+        /// <summary>Enable automatic receiver sensitivity</summary>
+        auto_rx_sensitivity = 87,
+
+        /// <summary>Change transmitter frequency, increasing effective range over sharpness</summary>
+        transmitter_frequency = 88,
+
+        /// <summary>Enables vertical binning which increases the maximal sensed distance</summary>
+        vertical_binning = 89,
+
+        /// <summary>Control the receiver sensitivity to incoming light, both projected and ambient</summary>
+        receiver_sensitivity = 90,
+
+#if FRAMOS
+
+        /// <summary>Inter-packet delay for eth cameras</summary>
+        InterPacketDelay = 93,
+
+        /// <summary>Packet size for eth cameras</summary>
+        PacketSize = 94,
+
+        /// <summary>Set user output level</summary>
+        UserOutputLevel = 95,
+
+        /// <summary>Select external trigger type for eth cameras</summary>
+        ExtTriggerSource = 96,
+
+        /// <summary>Execute software trigger for eth cameras</summary>
+        SoftwareTrigger = 97,
+
+        /// <summary>Software trigger translated to all sensors</summary>
+        SoftwareTriggerAllSensors = 98,
+
+        /// <summary>Line debouncer time (microseconds) for eth cameras</summary>
+        LineDebouncerTime = 99,
+
+        /// <summary>External Event burst count</summary>
+        ExternalEventBurstCount = 100,
+
+        /// <summary>Toggles the RGB camera LED light </summary>
+        RgbLedToggle = 101,
+        
+        /// <summary>Toggles the Metadata </summary>
+        MetadataToggle = 102,
+#endif
     }
 }

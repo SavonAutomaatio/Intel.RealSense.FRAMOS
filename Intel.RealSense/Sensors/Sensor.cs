@@ -8,6 +8,7 @@ namespace Intel.RealSense
     using System.Collections.Generic;
     using System.Collections.ObjectModel;
     using System.Diagnostics;
+    using System.Linq;
     using System.Runtime.InteropServices;
 
     // TODO: subclasses - DepthSensor, DepthStereoSensor, PoseSensor...
@@ -74,7 +75,7 @@ namespace Intel.RealSense
             lock (tableLock)
             {
                 IntPtr localHandle = Handle;
-                Debug.Assert(refCountTable.Contains(localHandle));
+                System.Diagnostics.Debug.Assert(refCountTable.Contains(localHandle));
 
                 base.Dispose(disposing);
 

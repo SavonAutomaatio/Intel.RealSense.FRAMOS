@@ -321,6 +321,12 @@
             Gets the name of the file to which the recorder is writing
             </summary>
         </member>
+        <member name="P:Intel.RealSense.SerializableDevice.JsonConfiguration">
+            <summary>
+            Gets or sets JSON and applies advanced-mode controls
+            </summary>
+            <value>Serialize JSON content</value>
+        </member>
         <member name="M:Intel.RealSense.UpdatableDevice.FromDevice(Intel.RealSense.Device)">
             <summary>
             Create an <see cref="T:Intel.RealSense.UpdatableDevice"/> from existing <see cref="T:Intel.RealSense.Device"/>
@@ -531,6 +537,11 @@
             Enqueue new frame into a queue
             </summary>
             <param name="f">frame to enqueue</param>
+        </member>
+        <member name="M:Intel.RealSense.FrameQueue.QueueSize">
+            <summary>
+            Number of frames hold by the queue
+            </summary>
         </member>
         <member name="M:Intel.RealSense.FrameSet.FromFrame(Intel.RealSense.Frame)">
             <summary>
@@ -1385,6 +1396,9 @@
         <member name="F:Intel.RealSense.CameraInfo.FirmwareVersion">
             <summary> Primary firmware version</summary>
         </member>
+        <member name="F:Intel.RealSense.CameraInfo.DeviceVersion">
+            <summary> Secondary firmware version, added for ethernet devices</summary>
+        </member>
         <member name="F:Intel.RealSense.CameraInfo.RecommendedFirmwareVersion">
             <summary> Recommended firmware version</summary>
         </member>
@@ -1405,6 +1419,12 @@
         </member>
         <member name="F:Intel.RealSense.CameraInfo.UsbTypeDescriptor">
             <summary> Designated USB specification: USB2/USB3</summary>
+        </member>
+        <member name="F:Intel.RealSense.CameraInfo.IpAddress">
+            <summary> Ip address, added for ethernet devices</summary>
+        </member>
+        <member name="F:Intel.RealSense.CameraInfo.SubnetMask">
+            <summary> Ip address, added for ethernet devices</summary>
         </member>
         <member name="T:Intel.RealSense.Distortion">
             <summary>
@@ -1552,6 +1572,9 @@
         </member>
         <member name="F:Intel.RealSense.Format.FG">
             <summary>16-bit per-pixel frame grabber format.</summary>
+        </member>
+        <member name="F:Intel.RealSense.Format.Y411">
+            <summary>12-bit per-pixel. 4 pixel data stream taking 6 bytes.</summary>
         </member>
         <member name="T:Intel.RealSense.FrameMetadataValue">
             <summary>
@@ -1979,6 +2002,48 @@
         </member>
         <member name="F:Intel.RealSense.Option.auto_gain_limit">
             <summary>auto gain limit - for D400 SKUs</summary>
+        </member>
+        <member name="F:Intel.RealSense.Option.auto_rx_sensitivity">
+            <summary>Enable automatic receiver sensitivity</summary>
+        </member>
+        <member name="F:Intel.RealSense.Option.transmitter_frequency">
+            <summary>Change transmitter frequency, increasing effective range over sharpness</summary>
+        </member>
+        <member name="F:Intel.RealSense.Option.vertical_binning">
+            <summary>Enables vertical binning which increases the maximal sensed distance</summary>
+        </member>
+        <member name="F:Intel.RealSense.Option.receiver_sensitivity">
+            <summary>Control the receiver sensitivity to incoming light, both projected and ambient</summary>
+        </member>
+        <member name="F:Intel.RealSense.Option.InterPacketDelay">
+            <summary>Inter-packet delay for eth cameras</summary>
+        </member>
+        <member name="F:Intel.RealSense.Option.PacketSize">
+            <summary>Packet size for eth cameras</summary>
+        </member>
+        <member name="F:Intel.RealSense.Option.UserOutputLevel">
+            <summary>Set user output level</summary>
+        </member>
+        <member name="F:Intel.RealSense.Option.ExtTriggerSource">
+            <summary>Select external trigger type for eth cameras</summary>
+        </member>
+        <member name="F:Intel.RealSense.Option.SoftwareTrigger">
+            <summary>Execute software trigger for eth cameras</summary>
+        </member>
+        <member name="F:Intel.RealSense.Option.SoftwareTriggerAllSensors">
+            <summary>Software trigger translated to all sensors</summary>
+        </member>
+        <member name="F:Intel.RealSense.Option.LineDebouncerTime">
+            <summary>Line debouncer time (microseconds) for eth cameras</summary>
+        </member>
+        <member name="F:Intel.RealSense.Option.ExternalEventBurstCount">
+            <summary>External Event burst count</summary>
+        </member>
+        <member name="F:Intel.RealSense.Option.RgbLedToggle">
+            <summary>Toggles the RGB camera LED light </summary>
+        </member>
+        <member name="F:Intel.RealSense.Option.MetadataToggle">
+            <summary>Toggles the Metadata </summary>
         </member>
         <member name="T:Intel.RealSense.PlaybackStatus">
             <summary>

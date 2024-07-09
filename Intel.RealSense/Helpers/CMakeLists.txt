@@ -1,3 +1,15 @@
+if(BUILD_FRAMOS_CODE)
+target_sources(${LRS_DOTNET_TARGET}
+    PRIVATE
+        "${CMAKE_CURRENT_LIST_DIR}/ErrorMarshaler.cs"
+        "${CMAKE_CURRENT_LIST_DIR}/ObjectPool.cs"
+        "${CMAKE_CURRENT_LIST_DIR}/Log.cs"
+        "${CMAKE_CURRENT_LIST_DIR}/ICompositeDisposable.cs"
+        "${CMAKE_CURRENT_LIST_DIR}/D400e.cs"
+)
+endif()
+
+if(NOT BUILD_FRAMOS_CODE)
 target_sources(${LRS_DOTNET_TARGET}
     PRIVATE
         "${CMAKE_CURRENT_LIST_DIR}/ErrorMarshaler.cs"
@@ -5,3 +17,4 @@ target_sources(${LRS_DOTNET_TARGET}
         "${CMAKE_CURRENT_LIST_DIR}/Log.cs"
         "${CMAKE_CURRENT_LIST_DIR}/ICompositeDisposable.cs"
 )
+endif()
